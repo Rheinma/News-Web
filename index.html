@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website With Login & Registration | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo"><img src="logo.jpg" width="200" height="100" alt="logo"></h2>
+        <nav class="navigation">
+            <a href="#" id="home-button">Home</a>
+            <a href="#">Hot News</a>
+            <a href="#">Popular News</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <!-- <label><input type="checkbox"></label> -->
+                    <a href="#"></a>
+                </div>
+                <button type="submit" id="login-button" class="btn">Login</button>
+                <div class="login-register">
+                    <p><a href="#" class="register-link"></a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2></h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="jepang">
+        <div id="content">
+            
+        </div>
+        <div id="hidden-post" class="hidden">
+            <article class="card">
+                <h2 id="post-view-title" class="newParagraph"></h2>
+                <span id="post-view-author"></span>
+                <img id="post-view-img" class="featured-image" alt="berita1"> <br>
+                <p id="post-view-paragraph" style="line-height: 2em;"></p>
+            </article>
+        </div>
+
+        <aside id="comments-section" class="hidden">
+            <article class="comment card extra-hidden" id="comment-input">
+                <h2>Comments</h2>
+                <textarea placeholder="Type your comment" id="comment-form"></textarea>
+                <button type="submit" id="submit-comment1">Submit comment</button>
+            </article>
+            <article id="comment" class="card">
+                <h2>Komentar</h2>
+                <div class="komentar-item" id="komentar">
+                    
+                </div>
+                <!-- <div class="komentar-item" id="komentar-baru">
+                    
+                </div> -->
+
+            </article>
+        </aside>
+
+
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
